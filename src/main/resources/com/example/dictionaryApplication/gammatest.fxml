@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<VBox alignment="CENTER" prefHeight="609.0" prefWidth="1039.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dictionaryApplication.Controller">
+   <children>
+      <AnchorPane prefHeight="79.0" prefWidth="1039.0" style="-fx-background-color: #00ffb4; -fx-border-color: BLACK; -fx-border-width: 1;" VBox.vgrow="ALWAYS">
+         <children>
+            <Label layoutX="16.0" layoutY="52.0" lineSpacing="8.0" prefHeight="35.0" prefWidth="103.0" text="Search" textAlignment="CENTER" AnchorPane.bottomAnchor="12.0">
+               <font>
+                  <Font name="System Bold Italic" size="24.0" />
+               </font>
+            </Label>
+            <Button layoutX="142.0" layoutY="24.0" mnemonicParsing="false" onAction="#plus" style="-fx-background-color: #00ffb4; -fx-border-color: #3b7380; -fx-border-width: 3;" text="+" textAlignment="CENTER" wrapText="true" AnchorPane.bottomAnchor="12.0">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Button>
+            <Label layoutX="358.0" layoutY="51.0" prefHeight="35.0" prefWidth="120.0" text="Definition" AnchorPane.bottomAnchor="11.0">
+               <font>
+                  <Font name="System Bold Italic" size="24.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="35.0" fitWidth="43.0" layoutX="308.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="11.0">
+               <image>
+                  <Image url="@../../../anh/clipart4812943.png" />
+               </image>
+            </ImageView>
+            <Line endX="-77.0" endY="52.50001525878906" layoutX="348.0" layoutY="27.0" startX="-77.0" startY="-24.0" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="0.0" />
+            <Button layoutX="954.0" layoutY="38.0" mnemonicParsing="false" onAction="#xuatfile" style="-fx-border-color: black;" text="UPDATE" textAlignment="CENTER" />
+         </children>
+      </AnchorPane>
+      <AnchorPane VBox.vgrow="ALWAYS">
+         <children>
+            <HBox layoutY="2.0">
+               <children>
+                  <AnchorPane style="-fx-border-color: BLACK; -fx-border-width: 1;">
+                     <children>
+                        <VBox layoutY="3.0" prefHeight="541.0" prefWidth="270.0">
+                           <children>
+                              <TextField fx:id="searchBar" alignment="TOP_LEFT" promptText="Search something">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </VBox.margin>
+                              </TextField>
+                              <ListView fx:id="searchListView" VBox.vgrow="ALWAYS">
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </VBox.margin>
+                              </ListView>
+                           </children>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane prefHeight="349.0" prefWidth="497.0">
+                     <children>
+                        <VBox prefHeight="533.0" prefWidth="497.0">
+                           <children>
+                              <HBox prefHeight="49.0" prefWidth="497.0">
+                                 <children>
+                                    <Label fx:id="target" prefHeight="49.0" prefWidth="314.0">
+                                       <font>
+                                          <Font name="Baskerville Old Face" size="23.0" />
+                                       </font>
+                                       <padding>
+                                          <Insets left="10.0" top="10.0" />
+                                       </padding>
+                                    </Label>
+                                    <Button fx:id="SaveEditButton" mnemonicParsing="false" onAction="#SaveEditWord" prefHeight="32.0" prefWidth="37.0" text="LUU" visible="false">
+                                       <HBox.margin>
+                                          <Insets right="10.0" />
+                                       </HBox.margin>
+                                       <font>
+                                          <Font size="10.0" />
+                                       </font>
+                                    </Button>
+                                    <Button fx:id="speechButton" alignment="TOP_LEFT" layoutX="449.0" layoutY="10.0" mnemonicParsing="false" onAction="#sound" prefHeight="32.0" prefWidth="37.0">
+                                       <graphic>
+                                          <ImageView fitHeight="24.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../../anh/pngegg.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                       <HBox.margin>
+                                          <Insets right="10.0" />
+                                       </HBox.margin>
+                                    </Button>
+                                    <Button fx:id="editButton" alignment="CENTER" layoutX="406.0" layoutY="10.0" mnemonicParsing="false" onAction="#editButton" prefHeight="32.0" prefWidth="37.0">
+                                       <graphic>
+                                          <ImageView fitHeight="17.0" fitWidth="26.0" onMouseClicked="#xuatfile" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../../anh/clipart4812943.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </Button>
+                                    <Button fx:id="eraseButton" alignment="CENTER" layoutX="456.0" layoutY="10.0" mnemonicParsing="false" onAction="#minus" prefHeight="32.0" prefWidth="37.0" text="XOA">
+                                       <HBox.margin>
+                                          <Insets left="10.0" />
+                                       </HBox.margin>
+                                       <font>
+                                          <Font size="10.0" />
+                                       </font>
+                                    </Button>
+                                 </children>
+                              </HBox>
+                              <Line endX="100.0" startX="-100.0" />
+                              <TextArea fx:id="spelling" blendMode="DARKEN" editable="false" prefHeight="0.0" prefWidth="497.0" style="-fx-background-color: TRANSPARENT; -fx-border-color: TRANSPARENT;" />
+                              <TextArea fx:id="definition" blendMode="DARKEN" editable="false" pickOnBounds="false" prefHeight="444.0" prefWidth="497.0" style="-fx-border-color: TRANSPARENT; -fx-border-width: 0; -fx-background-color: TRANSPARENT;" wrapText="true" VBox.vgrow="ALWAYS">
+                                 <opaqueInsets>
+                                    <Insets />
+                                 </opaqueInsets>
+                                 <VBox.margin>
+                                    <Insets />
+                                 </VBox.margin></TextArea>
+                           </children>
+                        </VBox>
+                     </children>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </AnchorPane>
+                  <AnchorPane>
+                     <HBox.margin>
+                        <Insets left="5.0" right="5.0" top="10.0" />
+                     </HBox.margin>
+                  </AnchorPane>
+                  <VBox alignment="CENTER" prefHeight="547.0" prefWidth="260.0">
+                     <children>
+                        <Label prefHeight="17.0" prefWidth="257.0" style="-fx-border-color: Black;" text="             Google API" textAlignment="CENTER">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets left="5.0" right="5.0" />
+                           </VBox.margin>
+                        </Label>
+                        <TextArea fx:id="GGAPIText" prefHeight="188.0" prefWidth="247.0" wrapText="true">
+                           <VBox.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </VBox.margin>
+                        </TextArea>
+                        <Button mnemonicParsing="false" onAction="#TranslateAPIButton" prefHeight="25.0" prefWidth="247.0" text="Translate">
+                           <VBox.margin>
+                              <Insets left="5.0" />
+                           </VBox.margin>
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Button>
+                        <TextArea fx:id="GGAPITranslate" editable="false" wrapText="true" VBox.vgrow="ALWAYS">
+                           <VBox.margin>
+                              <Insets bottom="10.0" left="5.0" right="5.0" top="5.0" />
+                           </VBox.margin>
+                        </TextArea>
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+         </children>
+      </AnchorPane>
+   </children>
+</VBox>

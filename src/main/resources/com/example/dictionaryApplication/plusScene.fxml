@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="250.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dictionaryApplication.plusSceneController">
+    <children>
+        <VBox layoutX="-2.0" prefHeight="250.0" prefWidth="400.0">
+            <children>
+                <Label prefHeight="26.0" prefWidth="300.0" text="Add more word !!!">
+                    <font>
+                        <Font size="24.0" />
+                    </font>
+                    <VBox.margin>
+                        <Insets left="100.0" />
+                    </VBox.margin>
+                </Label>
+                <HBox prefHeight="51.0" prefWidth="400.0">
+                    <children>
+                        <Label text="New Word: ">
+                            <HBox.margin>
+                                <Insets left="5.0" top="5.0" />
+                            </HBox.margin>
+                            <font>
+                                <Font size="24.0" />
+                            </font>
+                        </Label>
+                        <TextField fx:id="addNewWord" prefHeight="33.0" prefWidth="264.0">
+                            <HBox.margin>
+                                <Insets top="8.0" />
+                            </HBox.margin>
+                        </TextField>
+                    </children>
+                </HBox>
+                <HBox prefHeight="65.0" prefWidth="400.0">
+                    <children>
+                        <Label prefHeight="35.0" prefWidth="115.0" text="Spelling: ">
+                            <font>
+                                <Font size="24.0" />
+                            </font>
+                            <HBox.margin>
+                                <Insets left="5.0" />
+                            </HBox.margin>
+                        </Label>
+                        <TextField fx:id="addNewSpelling" prefHeight="32.0" prefWidth="262.0">
+                            <HBox.margin>
+                                <Insets left="12.0" top="5.0" />
+                            </HBox.margin>
+                        </TextField>
+                    </children>
+                </HBox>
+                <HBox prefHeight="111.0" prefWidth="400.0">
+                    <children>
+                        <Label text="Definition: ">
+                            <font>
+                                <Font size="24.0" />
+                            </font>
+                            <HBox.margin>
+                                <Insets left="5.0" top="5.0" />
+                            </HBox.margin>
+                        </Label>
+                        <TextArea fx:id="addNewDefinition" prefHeight="91.0" prefWidth="263.0">
+                            <HBox.margin>
+                                <Insets left="10.0" />
+                            </HBox.margin>
+                        </TextArea>
+                    </children>
+                </HBox>
+                <HBox prefHeight="60.0" prefWidth="400.0">
+                    <children>
+                        <Region prefHeight="48.0" prefWidth="232.0" />
+                        <Button fx:id="ADD" mnemonicParsing="false" onAction="#add" prefHeight="30.0" prefWidth="70.0" text="Add">
+                            <HBox.margin>
+                                <Insets top="5.0" />
+                            </HBox.margin>
+                        </Button>
+                        <Button fx:id="Cancel" mnemonicParsing="false" onAction="#Cancel" prefHeight="30.0" prefWidth="70.0" text="Cancel">
+                            <HBox.margin>
+                                <Insets left="20.0" top="5.0" />
+                            </HBox.margin>
+                        </Button>
+                    </children>
+                </HBox>
+            </children>
+        </VBox>
+    </children>
+</AnchorPane>
