@@ -10,7 +10,7 @@
 
 ## Features
 
-- Word lookup, with more than 120,000 words available
+- Word lookup, with more than 100,000 words available
 - Add new words
 - Edit, delete existing words
 - Pronunciation using [FreeTTS](https://freetts.sourceforge.io/) library
